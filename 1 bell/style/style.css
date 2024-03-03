@@ -1,0 +1,118 @@
+body{
+    /* background: linear-gradient(45deg, #314072, #ffffff); */
+    background-image: url("https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/09/satoru-gojo-death-jujutsu-kaisen-236.jpeg");
+    background-size: cover; 
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+button {
+    display: flexbox;
+    padding: 2em 3em;
+    outline: none;
+    font-weight: 800;
+    border: none;
+    color: #fff;
+    background-color: #2798e9;
+    border: 1px solid #586974;
+    border-radius: 0.3em;
+    margin-top: 4em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #47555f;
+}
+
+
+
+.notification {
+    display: grid;
+    position: relative;
+    padding: 0.6em;
+    background: #90b9d3;
+    border-radius: 0.2em;
+    font-size: 2em;
+    box-shadow: 0 0 10px rgba(168, 106, 106, 0.2);
+}
+
+.notification::before, 
+.notification::after {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(104, 75, 75, 0.3);
+}
+
+.notification::before {
+    display: block;
+    content: "\f0f3";
+    font-family: "fontawesome";
+    transform-origin: top center;
+    color: #333ea3;
+}
+
+.notification::after {
+    font-family: Arial;
+    font-size: 0.7em;
+    font-weight: 700;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    padding: 5px 8px;
+    line-height: 100%;
+    border: 2px #fff solid;
+    border-radius: 60px;
+    background: #485c69;
+    opacity: 0;
+    content: attr(data-count);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.notification.notify::before {
+    animation: ring 1.5s ease;
+}
+
+.notify.show-count::after {
+    transform: scale(1);
+    opacity: 1;
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate(35deg);
+    }
+    12.5% {
+        transform: rotate(-30deg);
+    }
+    25% {
+        transform: rotate(25deg);
+    }
+    37.5% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    62.5% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
