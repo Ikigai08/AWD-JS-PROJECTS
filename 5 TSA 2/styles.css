@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.days-container {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#monday { background-color: purple; }
+#tuesday { background-color: pink; }
+#wednesday { background-color: blue; }
+#thursday { background-color: green; }
+#friday { background-color: yellow; }
+#saturday { background-color: orange; }
+#sunday { background-color: red; }
+
+.animation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.color-box {
+  width: 500px;
+  height: 500px;
+  background-color: #3498db;
+  transition: background-color 0.5s;
+}
+
+  
+  
